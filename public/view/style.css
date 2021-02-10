@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 610px;
+    background-color: rgb(73, 167, 255);
+    background-image: url("../img/imgback2.svg");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 50%;
+}
+
+.header{
+    height: 150px;
+    background-color: #00008B;
+    color: #ffffff;
+}
+
+.logo{
+    float: left;
+}
+
+.title{
+    padding-top: 40px;
+    padding-left: 180px;
+}
+
+.navbar{
+    height: 31px;
+    margin: 0;
+    background-color: #374785;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+.prenota{
+    width: 200px;
+    height: 30px;
+    float: left;
+    padding: 5px;  
+    border: 0;
+    border-left: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    background-color: #374785;
+    color: #ffffff;
+    position: absolute;
+    right: 200px;
+    font-weight: bold;
+}
+
+.logout{
+    width: 200px;
+    height: 30px;
+    padding: 5px;  
+    border: 0;
+    border-left: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    background-color: #374785;
+    color: #ffffff;
+    position: absolute;
+    right: 0;
+    font-weight: bold;
+}
+
+.page{
+    width: 500px;
+    margin: auto;
+    margin-top: 5%;
+    color: #000000;
+}
+
+.message{
+    background-color: none;
+    color: green;
+    padding: 10px;
+}
+
+.view{
+    height: auto;
+    background-color: rgb(245,245,245,0.7);
+    padding: 10px;
+    border-radius: 12px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th{
+    background-color: #00008B;
+    color: white;
+}
+
+tr{
+    border: 1px solid #00008B;
+}
+
+td{
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+}
+
+.cancella{
+    background-color: transparent;
+    border: 0;
+}
+
+.credit{
+    height: 1px;
+    color: #ffffff;
+    position: absolute;
+    right: 2px;
+    bottom: 17px;
+    text-align: right;
+}
+
+@media only screen and (max-width: 700px){
+    body{
+        width: 100%;
+        height: 100%;
+        background-image: none;
+    }
+    
+    .header{
+        width: 100%;
+        height: 150px;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .title{
+        font-size: 12px;
+        padding-top: 50px;
+        padding-left: 15px;
+    }
+
+    .navbar{
+        width: 100%;
+        height: 62px;
+    }
+
+    .prenota{
+        width: 100%;
+        height: 30px;
+        position: absolute;
+        right: 0;
+        top: 151px;
+    }
+    
+    .logout{
+        width: 100%;
+        height: 30px;
+        position: absolute;
+        right: 0;
+        top: 181px;
+    }
+
+    .page{
+        width: 100%;
+        height: 100%;
+    }
+
+    .view{
+        width: 80%;
+        height: auto;
+        margin: auto;
+    }
+
+}
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UNIMI - Login Page</title>
+        <link href="/login/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+        <div class="header">
+            <div class="logo">
+                <img class="img-logo" src="../img/LogoUnimi.svg" alt="Image Not Found!">
+            </div>
+            <div class="title">
+                <h1>Università Statale di Milano</h1>
+                <h3>Progetto Programmazione Web e Mobile - Luca Forzano</h3>
+            </div>
+        </div>
+
+        <div class="page">
+            <div class="text">
+                <h3>Autenticazione</h3>
+            </div>
+
+            <div class="message">
+                <h4><%= message %></h4>
+            </div>
+
+            <div class="login">
+                <form action="/login" method="POST">
+                    <label for="username"><h4>Inserisci il tuo username:</h4></label>
+                    <input type="text" name="username" placeholder="Username" class="input"><br><br>
+                    <label for="usertype"><h4>Inserisci il tuo usertype:</h4></label>
+                        <select name="usertype" class="input">
+                            <option>-- selezionare --</option>
+                            <option value="@studenti.unimi.it">@studenti.unimi.it</option>
+                            <option value="@unimi.it">@unimi.it</option>
+                        </select>
+                        <br><br>
+                    <label for="password"><h4>Inserisci la tua password:</h4></label>
+                    <input type="password" name="password" placeholder="Password" class="input"> <br><br>
+                    <input type="submit" value="Login" class="button">
+                </form>
+            </div>
+        </div>
+        <div class="credit">
+            <p>Created by Luca Forzano</p>
+        </div>
+    </body>
+</html>

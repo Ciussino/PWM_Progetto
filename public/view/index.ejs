@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizza prenotazioni</title>
+    <link href="/view/style.css" rel="stylesheet" type="text/css">
+    <script language="JavaScript" src="/view/script.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="../img/LogoUnimi.svg" alt="Image Not Found!">
+        </div>
+        <div class="title">
+            <h1>Università Statale di Milano</h1>
+            <h3>Progetto Programmazione Web e Mobile - Luca Forzano</h3>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="/prenota"><button class="prenota">Prenota aula</button></a>
+
+        <form action="/logout" method="POST">
+            <button class="logout">Logout</button>
+        </form>
+    </div>
+
+    <div class="page">
+        <div class="view">
+            <div class="message">
+                <h4><%= message %></h4>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Aula</th>
+                        <th>Responsabile</th>
+                        <th>Cancella</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% prenota.forEach(function(prenotazione) { %>
+                        <tr>
+                            <td><%= prenotazione.data %></td>
+                            <td><%= prenotazione.aula %></td>
+                            <td><%= prenotazione.responsabile %></td>
+                            <td>
+                                <form action="/view/<%= prenotazione._id%>" method="POST">
+                                    <button class="cancella"><img src="../img/bin.svg" alt="IconNotFound"></button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>  
+        </div>
+    </div>
+    <div class="credit">
+        <p>Created by Luca Forzano</p>
+    </div>
+</body>
+</html>
